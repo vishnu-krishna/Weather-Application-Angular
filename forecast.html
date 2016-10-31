@@ -1,0 +1,29 @@
+<p>
+    <a href="#/">Back to Search</a>
+</p>
+
+<br/> Forecast for {{city}}
+
+<div ng-repeat='w in weatherResult.list'>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{convertToDate(w.dt) | date:'MMM d, y'}}</h3>
+                </div>
+                <div class="panel-body">
+                    Daytime Temperature: {{convertToCelsius(w.temp.day)}}&deg;C
+                </div>
+                <div class="panel-body">
+                    Minimum Temperature : {{convertToCelsius(w.temp.min)}}&deg;C
+                </div>
+                <div class="panel-body">
+                    Maximum Temperature : {{convertToCelsius(w.temp.max)}}&deg;C
+                </div>
+                <div class="panel-body">
+                    Weather Condition:<img src='http://openweathermap.org/img/w/{{w.weather[0].icon}}.png' /> {{w.weather[0].description}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+html,
+body,
+input,
+select,
+textarea {
+    font-family: 'Lora', serif !important;
+    font-size: 1.05em !important;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif !important;
+}
+

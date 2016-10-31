@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h4>Forecast By City</h4>
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model='city' onkeydown="if (event.keyCode == 13)
+                        document.getElementById('Clicker').click()" />
+            <br/>
+            <h4>Number of Days</h4>
+            <input type="text" class="form-control" ng-model='days' onkeydown="if (event.keyCode == 13)
+                        document.getElementById('Clicker').click()" />
+        </div>
+        <div class="alert alert-warning" ng-show="days > limit">
+            Weather Forecast would be pushlished only for 16 days. Click the below button to continue.
+        </div>
+        <a href="#/forecast" class="btn btn-primary" id="Clicker" ng-model='city'>Get Forecast for {{city}}</a>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
